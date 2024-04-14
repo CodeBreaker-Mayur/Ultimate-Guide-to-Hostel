@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Hostels & PGs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset CSS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fff;
+            color: #000;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        /* Main Content */
+        .container {
+            width: 90%;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .filter-container {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .filter-container label {
+            margin: 0 10px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: #000;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            border: 1px solid #000;
+        }
+
+        .filter-container label:hover {
+            background-color: #333;
+        }
+
+        .filter-container input[type="radio"] {
+            display: none;
+        }
+
+        .filter-container input[type="radio"]:checked + label {
+            background-color: #333;
+        }
+
+        .hostel-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .hostel-item {
+            border-bottom: 1px solid #ccc;
+            padding: 20px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hostel-item h2 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .hostel-item p {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .hostel-item p:last-child {
+            margin-bottom: 0;
+        }
+        .hostel-slider {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+          }
+          
+          .slider {
+            display: flex;
+            overflow-x: hidden;
+          }
+          
+          .slide {
+            width: 100%;
+          }
+          
+          .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            z-index: 1;
+          }
+          
+          .prev {
+            left: 0;
+          }
+          
+          .next {
+            right: 0;
+          }
+          
+        .facility-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explore Student Hostels & PGs</h1>
+        <p>Find the perfect accommodation for your college life!</p>
+    </header>
+    <div class="container">
+        <input type="text" id="searchInput" placeholder="Search for hostels...">
+        <div class="filter-container">
+            <input type="radio" id="allFilter" name="filter" value="all" checked>
+            <label for="allFilter">All</label>
+
+            <input type="radio" id="girlsFilter" name="filter" value="girls">
+            <label for="girlsFilter">Girls Hostels</label>
+
+            <input type="radio" id="boysFilter" name="filter" value="boys">
+            <label for="boysFilter">Boys Hostels</label>
+
+            <input type="radio" id="pgFilter" name="filter" value="pg">
+            <label for="pgFilter">PGs</label>
+        </div>
+        <ul class="hostel-list" id="hostels">
+            <li class="hostel-item">
+                <div>
+                    <h2>Friendz Boys Hostel</h2>
+                    <p>Address: Near Pizza Hut, Opp. Bharati Vidyapeeth Main Gate.</p>
+                    <p>Contact Info: 9689138584 / 9309836820</p>
+                    <ul class="facility-list">
+                        <li>24 Hours Wifi with 100 Mbps Speed</li>
+                        <li>Free House Keeping</li>
+                        <li>24 Hours Security</li>
+                        <li>24 Hours Purified Drinking Water</li>
+                        <li>Private Cupboard</li>
+                        <li>CCTV Camera</li>
+                    </ul>
+                </div>
+                <div class="hostel-slider">
+                    <div class="slider">
+                      <img src="https://drive.google.com/uc?export=download&id=1JE4qhmjGcVc0CcdyOBggssOB7dYaNYIk" class="slide">
+                      <img src="" class="slide">
+                      <!-- Add more images if needed -->
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1, 1)">❮</a>
+                    <a class="next" onclick="plusSlides(1, 1)">❯</a>
+                  </div>
+                </div>
+            </li>
+
+            <li class="hostel-item">
+                <div>
+                    <h2>Aashadeep Boys Hostel</h2>
+                    <p>Address: Hrishikesh Society, Plot No. 8 Aashadeep, at front of<br> Bharti Vidyapeeth Main Gate,Katraj,Pune-46</p>
+                    <p>Contact Info: 7020678915 / 8087721824</p>
+                    <ul class="facility-list">
+                        <li>24 Hours Wifi</li>
+                        <li>Luxorious & Spacious Room</li>
+                        <li>Free HouseKeeping</li>
+                        <li>24 Hours Security</li>
+                        <li>Solar System</li>
+                        <li>Private Cupboard</li>
+                        <li>Western Toilet & Bathroom</li>
+                        <li>Common Space Available</li>
+                    </ul>
+                </div>
+                <div class="image-slider">
+                    <img src="C:\Users\Mayur Gawari\OneDrive\Desktop\Hostels Photo\Aashadeep Hostel\Aashadeep Hostel 1.jpg" alt="Aashadeep Boys Hostel 1">
+                    <img src="C:\Users\Mayur Gawari\OneDrive\Desktop\Hostels Photo\Aashadeep Hostel\Aashadeep Hostel 2.jpg" alt="Aashadeep Boys Hostel 2">
+                    <img src="C:\Users\Mayur Gawari\OneDrive\Desktop\Hostels Photo\Aashadeep Hostel\Aashadeep Hostel 3.jpg" alt="Aashadeep Boys Hostel 3">
+                    <img src="C:\Users\Mayur Gawari\OneDrive\Desktop\Hostels Photo\Aashadeep Hostel\Aashadeep Hostel 4.jpg" alt="Aashadeep Boys Hostel 4">
+                    <img src="C:\Users\Mayur Gawari\OneDrive\Desktop\Hostels Photo\Aashadeep Hostel\Aashadeep Hostel 5.jpg" alt="Aashadeep Boys Hostel 5">
+                    <img src="C:\Users\Mayur Gawari\OneDrive\Desktop\Hostels Photo\Aashadeep Hostel\Aashadeep Hostel 6.jpg" alt="Aashadeep Boys Hostel 6">
+                    <img src="C:\Users\Mayur Gawari\OneDrive\Desktop\Hostels Photo\Aashadeep Hostel\Aashadeep Hostel 7.jpg" alt="Aashadeep Boys Hostel 7">
+                    <img src="C:\Users\Mayur Gawari\OneDrive\Desktop\Hostels Photo\Aashadeep Hostel\Aashadeep Hostel 8.jpg" alt="Aashadeep Boys Hostel 8">
+                    <!-- Add more images for slider -->
+                </div>
+            </li>
+            <!-- Add more hostel items as needed -->
+        </ul>
+    </div>
+
+    <script>
+        var slideIndex = [1, 1];
+        var slideId = ["1", "2"];
+        showSlides(1, 1);
+        showSlides(1, 2);
+        
+        function plusSlides(n, id) {
+          showSlides(slideIndex[id-1] += n, id);
+        }
+        
+        function showSlides(n, id) {
+          var i;
+          var slides = document.getElementsByClassName("hostel-slider")[id-1].getElementsByClassName("slide");
+          if (n > slides.length) {slideIndex[id-1] = 1}
+          if (n < 1) {slideIndex[id-1] = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          slides[slideIndex[id-1]-1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
